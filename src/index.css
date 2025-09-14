@@ -1,68 +1,95 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@import "tailwindcss";
+@tailwind utilities;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@theme {
+    --color-neutral-900: #02012C;
+    --color-neutral-800: #262540;
+    --color-neutral-700: #302F4A;
+    --color-neutral-600: #3C3B5E;
+    --color-neutral-300: #ACACB7;
+    --color-neutral-200: #D4D3D9;
+    --color-neutral-0: #FFFFFF;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+    --color-orange-500: #FF820A;
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    --color-blue-500: #4658D9;
+    --color-blue-700: #2B1B9C;
+
+    --font-dm: 'DM Sans', sans-serif;
+    --font-brico-grt: 'Bricolage Grotesque', normal;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@utility text-preset-1 {
+    font-family: var(--font-dm);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 96px;
+    line-height: 100%;
+    letter-spacing: -2px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@utility text-preset-2 {
+    font-family: var(--font-brico-grt);
+    font-weight: 800;
+    font-style: normal;
+    font-size: 96px;
+    line-height: 120%;
+    letter-spacing: 0px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+@utility text-preset-3 {
+    font-family: var(--font-dm);
+    font-weight: 300;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+@utility text-preset-4 {
+    font-family: var(--font-dm);
+    font-weight: 800;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: 0;
+}
+
+@utility text-preset-5 {
+   font-family: var(--font-dm);
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0;
+}
+
+@utility text-preset-6 {
+    font-family: var(--font-dm);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0;
+}
+
+@utility text-preset-7 {
+    font-family: var(--font-dm);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0;
+}
+
+@utility text-preset-8 {
+    font-family: var(--font-dm);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0;
 }

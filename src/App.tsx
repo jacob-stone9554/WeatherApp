@@ -1,33 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import './index.css';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <div className="bg-neutral-200 h-30">
+            <p className="text-preset-1">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+        <div className="bg-neutral-200 h-30">
+            <p className="text-preset-2">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+        <div className="bg-neutral-200 h-30">
+            <p className="text-preset-3">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+        <div className="bg-neutral-200 h-30">
+            <p className="text-preset-4">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+        <div className="bg-neutral-200 h-30">
+            <p className="text-preset-5">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+        <div className="bg-neutral-200 h-30">
+            <p className="text-preset-6">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+        <div className="bg-neutral-200 h-30">
+            <p className="text-preset-7">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+        <div className="bg-neutral-200 h-30">
+            <p className="text-preset-8">The quick brown fox jumps over the lazy dog.</p>
+        </div>
     </>
   )
 }
