@@ -8,9 +8,11 @@ function App() {
 
   return (
     <>
-        <Navbar />
-        <Search />
-        <WeatherContent />
+        <div className="h-screen bg-neutral-900 text-white">
+            <Navbar />
+            <Search />
+            <WeatherContent />
+        </div>
     </>
   )
 }
