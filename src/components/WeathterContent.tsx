@@ -1,28 +1,8 @@
-<<<<<<< Updated upstream
-
-function WeatherContent() {
-    return(
-        <>
-            <div className="flex flex-row items-center justify-around bg-neutral-900 w-full text-white h-screen">
-
-                    <div className="flex flex-col w-full">
-                        <div title="main card" className="flex flex-row items-center justify-between bg-blue-600 w-full h-50">
-                            <p>Main Content</p>
-                        </div>
-                        <div title="details row">
-                            Details Row
-                        </div>
-                        <div title="daily forecast">
-                            <p>Daily Forecasts</p>
-                        </div>
-                    </div>
-                <div className="flex flex-col w-full">
-                    <p>Right sidebar</p>
-=======
 import Details from "./Details.tsx";
 import Daily from "./Daily.tsx";
 import Hourly from "./Hourly.tsx";
 import Current from "./Current.tsx";
+
 function WeatherContent() {
     return(
         <>
@@ -47,7 +27,6 @@ function WeatherContent() {
                 </div>
                 <div className="flex flex-col flex-[1] items-end pl-5">
                     <Hourly />
->>>>>>> Stashed changes
                 </div>
             </div>
         </>

@@ -1,6 +1,10 @@
 ﻿import { useState, useRef, useEffect } from "react";
+import UnitOption from "./UnitOption.tsx";
 function Units () {
     const [open, setOpen] = useState<boolean>(false);
+    const [tempUnit, setTempUnit] = useState("celsius");
+    const [windUnit, setWindUnit] = useState("kmh");
+    const [precipUnit, setPrecipUnit] = useState("mm");
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -26,16 +30,37 @@ function Units () {
                     onClick={() => setOpen(!open)}
                 >
                     <img src="/images/icon-units.svg" alt="units" />
-                    <p>Units</p>
+                    <p className="mb-1">Units</p>
                     <img src="/images/icon-dropdown.svg" alt="dropdown" />
                 </button>
-
                 {open && (
                     <div className="absolute right-0 mt-2 origin-top-left bg-neutral-700 w-55 rounded-md shadow-lg border border-neutral-600 px-4 py-2" >
-                        <p className="text-preset-7">Switch to Imperial</p>
-                        <p className="text-preset-8 text-neutral-300">Temperature</p>
-                        <p className="hover:bg-neutral-600">Celsius</p>
-                        <p className="hover:bg-neutral-600">Fahrenheit</p>
+                        <p className="text-preset-7 mb-3">Switch to Imperial</p>
+                        <UnitOption
+                            title="Temperature"
+                            options={[
+                                { label: "Celsius (°C)", value: "celsius", selected: tempUnit === "celsius" },
+                                { label: "Fahrenheit (°F)", value: "fahrenheit", selected: tempUnit === "fahrenheit" },
+                            ]}
+                            onSelect={(v) => setTempUnit(v)}
+                        />
+                        <UnitOption
+                            title="Wind Speed"
+                            options={[
+                                { label: "km/h", value: "kmh", selected: windUnit === "kmh" },
+                                { label: "mph", value: "mph", selected: windUnit === "mph" },
+                            ]}
+                            onSelect={(v) => setWindUnit(v)}
+                            />
+                        <UnitOption
+                            title="Precipitation"
+                            options={[
+                                { label: "Millimeters (mm)", value: "mm", selected: precipUnit === "mm" },
+                                { label: "Inches (in)", value: "in", selected: precipUnit === "in" },
+                            ]}
+                            onSelect={(v) => setPrecipUnit(v)}
+                            showDivider={false}
+                            />
                     </div>
                 )}
             </div>
